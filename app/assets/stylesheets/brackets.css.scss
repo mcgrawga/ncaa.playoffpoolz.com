@@ -1,0 +1,166 @@
+// Place all the styles related to the brackets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+#test_span{
+	border-radius:5px;
+	background: Chartreuse;
+	padding-left: 5px;
+  padding-right: 5px;
+}
+*/
+.choose_num_players_text{
+		font-size:20px; 
+}
+#bracket_container {
+	//width: 1510px;
+	width: 1675px;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+	padding-right: 10px;
+	//background: #EEEEEE;
+	//border: 1px solid #999;
+	border-radius: 8px;
+}
+#bracket_title{
+	text-align:center;
+}
+#bracket_group_title{
+	text-align:center;
+	color:gray;
+}
+#master_bracket_title{
+	text-align:center;
+	color:red;
+}
+.team_block_col1 { 
+	width: 165px;
+	height: 15px;
+	position: relative; 
+}
+.team_block { 
+	width: 115px;
+	height: 15px;
+	position: relative; 
+}
+.bottom_border { 
+	border-bottom: solid;
+	color:darkgray;
+}
+.right_border { 
+	border-right: solid;
+	color:darkgray;
+}
+.left_border { 
+	border-left: solid;
+	color:darkgray;
+}
+/*
+.block { 
+	width: 100px;
+	height: 50px;
+	position: relative; 
+}
+*/
+.float_left { float: left; }
+.float_right { float: right; }
+.clear_left { clear: left; }
+.clear_right { clear: right; }
+.green { 
+	border-radius:10px;
+	#background: Chartreuse;
+	background: lightgreen;
+	padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nat_champ_text
+{
+		border-top: solid;
+		white-space:nowrap;
+    position: absolute; 
+    bottom: 0; 
+		font-size:16px; 
+    font-style: italic; 
+		color:gray;
+}
+
+.nat_champ_team
+{
+		white-space:nowrap;
+    position: absolute; 
+    bottom: 0; 
+		font-size:14px; 
+    font-style: italic; 
+		color:#303030;
+}
+
+.team_name 
+{ 
+		cursor: pointer; 
+}
+
+.column_format
+{ 
+    position: absolute; 
+    bottom: 0; 
+		//cursor: pointer; 
+		font-size:10px; 
+    font-style: italic; 
+    padding-left:5px; 
+		#color:#303030;
+		color:black;
+}
+
+.seat 
+{ 
+    position: absolute; 
+    bottom: 0; 
+		//cursor: pointer; 
+		font-size:10px; 
+    font-style: italic; 
+    padding-left:5px; 
+		color:#303030;
+}
+
+.team_name_rs  // team name right side of bracket 
+{ 
+		cursor: pointer; 
+}
+
+.column_format_rs  // team name right side of bracket 
+{ 
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+		margin-right: 5px;
+		//cursor: pointer; 
+		font-size:10px; 
+    font-style: italic; 
+    padding-left:5px; 
+		color:#161616;
+}
+
+/*
+.team_name_bottom_right
+{ position: absolute; right: 0; bottom: 0; }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

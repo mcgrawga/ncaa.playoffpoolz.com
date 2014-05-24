@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+<% 1.upto(64) do |i| %>
+fix_<%= i %>:
+  id: <%= i %>
+  name: Basketball_Team_<%= i %>
+  record: "24-7" 
+  seat: 15
+<% end %>

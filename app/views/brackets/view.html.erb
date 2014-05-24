@@ -1,0 +1,8 @@
+<%content_for :title do%>View Bracket<%end%>
+<h1 id="bracket_title">2014 NCAA Men's Basketball Tournament Bracket (<%=@bracket.user.pool_name%>)</h1>
+<h4 id="bracket_group_title"><%=@bracket.user.first_name%> <%=@bracket.user.last_name%></h4>
+<h4 id="bracket_group_title"><%=@bracket_points%> points</h4>
+<br>
+<%= render "bracket" %>
+
+

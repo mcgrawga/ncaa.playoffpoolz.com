@@ -1,0 +1,14 @@
+<h2>
+				Your request was sent to the
+				<span class="glyphicon glyphicon-trash"></span>
+				because your tournament pool has not been paid for.
+</h2>
+
+<% a = get_admin %>
+
+<h4>
+				Tell <%= a.first_name %> <%= a.last_name %> (<%=a.email%>) to login and pay the bill!
+</h4>
+<h4>
+				Or you can pay the bill for your pool, click <%= link_to "here", new_charge_path %> to pay.
+</h4>

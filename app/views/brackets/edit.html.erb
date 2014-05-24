@@ -1,0 +1,63 @@
+<%content_for :title do%>Edit Bracket<%end%>
+<h1 id="bracket_title">2014 NCAA Men's Basketball Tournament Bracket (<%=@bracket.user.pool_name.titleize%>)</h1>
+<% if @cutoffdate.present? %>
+	<h3 id="bracket_group_title">Bracket must be completed by <%= @cutoffdate.dt_time.strftime("%B %d, %I:%M %p") %></h3>
+<% end %>
+<h4 id="bracket_group_title"><%=@bracket.user.first_name %> <%=@bracket.user.last_name %></h4>
+<h4 id="bracket_group_title"><%=@bracket_points%> points</h4>
+<br>
+<%= render "bracket" %>
+<%= form_for(@bracket) do |f| %>
+  <% if @bracket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bracket.errors.count, "error") %> prohibited this bracket from being saved:</h2>
+
+      <ul>
+      <% @bracket.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<% (1..64).each do |n|  %>
+  <% field_name = 'round2_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..32).each do |n|  %>
+  <% field_name = 'round3_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..16).each do |n|  %>
+  <% field_name = 'round4_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..8).each do |n|  %>
+  <% field_name = 'round5_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..4).each do |n|  %>
+  <% field_name = 'round6_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..2).each do |n|  %>
+  <% field_name = 'round7_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..1).each do |n|  %>
+  <% field_name = 'round8_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+
+<div class="actions center_div">
+	<%= f.submit "Save Bracket", class: "btn btn-lg btn-primary"%>
+</div>
+
+<% end %>

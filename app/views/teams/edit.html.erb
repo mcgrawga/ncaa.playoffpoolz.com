@@ -1,0 +1,32 @@
+<%content_for :title do%>Edit Teams<%end%>
+<h1>Edit Teams</h1>
+
+<%= form_for :team, :url => teams_update_path, :html => {:method => :put} do %>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Record</th>
+			<th>Seat</th>
+		</tr>
+	
+		<% @teams.each do |team| %>
+			<%= fields_for "teams[]", team do |team_fields| %>
+			<tr>
+				<td><%= team_fields.number_field :id %></td>
+				<td><%= team_fields.text_field :name,  :maxlength => 20 %></td>
+				<td><%= team_fields.text_field :record %></td>
+				<td><%= team_fields.number_field :seat %></td>
+			</tr>	
+			<% end %>
+		<% end %>
+
+	</table>
+
+	<div class="actions">
+		<%= submit_tag %>
+	</div>
+
+<% end %>
+
+

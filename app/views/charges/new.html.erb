@@ -1,0 +1,85 @@
+<h2>Choose the Number of Players in your Pool.</h2>
+
+<ul class="list-group">
+
+<li class="list-group-item">
+<%= form_tag charges_path do %>
+<%= hidden_field_tag(:charge_amt, "2000") %>
+<%= hidden_field_tag(:player_limit, "15") %>
+<span class="choose_num_players_text">Up to 15 Players...  </span>
+<div class="float_right">
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="NCAA tourney pool 15 players"
+          data-email=<%= get_email %>
+					data-allow-remember-me="false"
+          data-name="NCAA Tourney Pool"
+          data-label="Pay $20.00"
+          data-amount="2000"></script>
+</div>
+<div class="clear_right">
+</div>
+<% end %>
+</li>
+
+<li class="list-group-item">
+<%= form_tag charges_path do %>
+<%= hidden_field_tag(:charge_amt, "3500") %>
+<%= hidden_field_tag(:player_limit, "35") %>
+<span class="choose_num_players_text">Up to 35 Players...  </span>
+<div class="float_right">
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="NCAA tourney pool 35 players"
+          data-email=<%= get_email %>
+					data-allow-remember-me="false"
+          data-name="NCAA Tourney Pool"
+          data-label="Pay $35.00"
+          data-amount="3500"></script>
+</div>
+<div class="clear_right">
+</div>
+<% end %>
+</li>
+
+<li class="list-group-item">
+<%= form_tag charges_path do %>
+<%= hidden_field_tag(:charge_amt, "5000") %>
+<%= hidden_field_tag(:player_limit, "65") %>
+<span class="choose_num_players_text">Up to 65 Players...  </span>
+<div class="float_right">
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="NCAA tourney pool 65 players"
+          data-email=<%= get_email %>
+					data-allow-remember-me="false"
+          data-name="NCAA Tourney Pool"
+          data-label="Pay $50.00"
+          data-amount="5000"></script>
+</div>
+<div class="clear_right">
+</div>
+<% end %>
+</li>
+
+<li class="list-group-item">
+<%= form_tag charges_path do %>
+<%= hidden_field_tag(:charge_amt, "7500") %>
+<%= hidden_field_tag(:player_limit, "100") %>
+<span class="choose_num_players_text">Up to 100 Players</span> (You don't have this many friends!)
+<div class="float_right">
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="NCAA tourney pool 100 players"
+          data-email=<%= get_email %>
+					data-allow-remember-me="false"
+          data-name="NCAA Tourney Pool"
+          data-label="Pay $75.00"
+          data-amount="7500"></script>
+</div>
+<div class="clear_right">
+</div>
+<% end %>
+</li>
+
+</ul>

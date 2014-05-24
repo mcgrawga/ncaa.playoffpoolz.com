@@ -1,0 +1,11 @@
+<h1>Signup Complete</h1>
+<h2>Invite others to join your pool.</h2>
+<h2>Send them this link:  <%= link_to new_player_registration_url, new_player_registration_path %></h2>
+<% if admin_signed_in? %>
+	<h2>Have them to sign up using your pool name: <%= current_admin.pool_name.titleize %> </h2>
+<% end %>
+<% if player_signed_in? %>
+	<h2>Have them to sign up using your pool name: <%= current_player.pool_name.titleize %> </h2>
+<% end %>
+<br>
+<h2>Get started filling out your <%= link_to "bracket", brackets_edit_path %></h2>

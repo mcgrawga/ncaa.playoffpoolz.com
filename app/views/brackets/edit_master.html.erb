@@ -1,0 +1,63 @@
+<%content_for :title do%>Edit Master Bracket<%end%>
+<h1 id="bracket_title">2014 NCAA Men's Basketball Tournament Bracket</h1>
+<h2 id="master_bracket_title">MASTER BRACKET</h1>
+<br>
+<%= render "bracket" %>
+
+<%= form_for(@bracket, :url => brackets_update_master_path, :html => {:method => :put}) do |f| %>
+  <% if @bracket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bracket.errors.count, "error") %> prohibited this bracket from being saved:</h2>
+
+      <ul>
+      <% @bracket.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= f.hidden_field :id %>
+
+<% (1..64).each do |n|  %>
+  <% field_name = 'round2_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..32).each do |n|  %>
+  <% field_name = 'round3_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..16).each do |n|  %>
+  <% field_name = 'round4_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..8).each do |n|  %>
+  <% field_name = 'round5_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..4).each do |n|  %>
+  <% field_name = 'round6_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..2).each do |n|  %>
+  <% field_name = 'round7_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+<% (1..1).each do |n|  %>
+  <% field_name = 'round8_team' + n.to_s %>
+  <%= f.hidden_field field_name %>
+<% end  %>
+
+
+<div class="actions center_div">
+	<%= f.submit "Save Bracket", class: "btn btn-lg btn-primary"%>
+</div>
+
+<% end %>
+
