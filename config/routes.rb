@@ -21,16 +21,20 @@ Ncaa::Application.routes.draw do
   devise_for :admins, :controllers => { :registrations => :registrations }
   devise_for :players, :controllers => { :registrations => :registrations }
   get "staticpages/index"
-  get "staticpages/pricing"
-  get "staticpages/scoring"
-  get "staticpages/howitworks"
+  #get "staticpages/pricing"
+  #get "staticpages/scoring"
+  #get "staticpages/howitworks"
+  get "howitworks" => "staticpages#howitworks", as: :staticpages_howitworks
+  get "pricing" => "staticpages#pricing", as: :staticpages_pricing
+  get "scoring" => "staticpages#scoring", as: :staticpages_scoring
+  get "contact" => "staticpages#contact", as: :staticpages_contact
   get "staticpages/notauthorized"
   get "staticpages/nopairings"
   get "staticpages/signupthanks"
   get "staticpages/notpaid"
   get "staticpages/overmaxplayers"
   get "staticpages/nomoresignups"
-  get "staticpages/contact"
+  #get "staticpages/contact"
 
   get "testpages/test"
   # The priority is based upon order of creation: first created -> highest priority.
