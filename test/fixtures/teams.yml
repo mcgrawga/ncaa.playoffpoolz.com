@@ -1,9 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+<%
+TeamSeating16 = Array[1,16,8,9,5,12,4,13,6,11,3,14,7,10,2,15]
+TeamSeating64 = TeamSeating16 + TeamSeating16 + TeamSeating16 + TeamSeating16
+%>
+
 <% 1.upto(64) do |i| %>
 fix_<%= i %>:
   id: <%= i %>
   name: Basketball_Team_<%= i %>
   record: "24-7" 
-  seat: 15
+  seat: <%= TeamSeating64[(i-1)] %>
 <% end %>

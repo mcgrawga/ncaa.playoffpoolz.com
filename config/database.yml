@@ -19,8 +19,9 @@ development:
   encoding: unicode
   database: ncaa_development
   pool: 5
+  host: localhost
   username: mcgrawga
-  password:
+  password: Red1ranger*	
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,5 +49,6 @@ test:
   encoding: unicode
   database: ncaa_test
   pool: 5
+  host: localhost
   username: mcgrawga
-  password:
+  password: Red1ranger*

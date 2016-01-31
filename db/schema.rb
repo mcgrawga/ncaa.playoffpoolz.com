@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140424170126) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "brackets", force: true do |t|
     t.integer  "round2_team1"
     t.integer  "round2_team2"

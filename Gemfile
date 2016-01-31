@@ -4,7 +4,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 # Needed to deploy to Heroku
 gem 'rails_12factor', group: :production
-ruby "2.0.0"
+ruby "2.2.1"
 
 gem 'devise'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
