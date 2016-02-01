@@ -41,6 +41,26 @@ function prep_bracket(){
     });
 
 
+    $('.link_column_1').click(function(){
+			var title = $(document).attr('title');
+			if (title != 'NCAA Tournament Pool - View Bracket' && title != 'NCAA Tournament Pool - View Master Bracket')
+		  {	
+							var currentHiddenFieldTag = getHiddenFieldTag($(this).find('.team_name').attr('id'));
+							var nextSpanTag = getNextSpanTag($(this).find('.team_name').attr('id'));
+							var nextHiddenFieldTag = getHiddenFieldTag(nextSpanTag);
+
+							//alert($(this).text());
+							if ( $(this).find('.team_name').text() != $("#" + nextSpanTag).text() )
+								clearPicks(nextSpanTag, 8); 
+
+							$("#" + nextSpanTag).text($(this).find('.team_name').text());
+							$("#" + nextHiddenFieldTag).val($("#" + currentHiddenFieldTag).val());
+							
+							if (nextSpanTag == 'round8_team1')
+								$('.nat_champ_team').css({"left":($('.nat_champ_team').parent().width() - $('.nat_champ_team').width()) / 2});
+			}
+    });
+
 		$('.nat_champ_team').each(function(){
 				$(this).css({
       	//"position":"relative",

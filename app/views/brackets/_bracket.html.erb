@@ -30,7 +30,7 @@
 						<% i = get_team_info @bracket, 'round2team' + col1_team_counter.to_s %>
 						<%if round2_rb_array.include? r %>
 							<div class="team_block_col1 float_left bottom_border right_border">
-								<span class="column_format">
+								<span class="column_format link_column_1">
 									<span><%=i[:seat]%></span>
 									<span id="<%=span_id%>" class="team_name"><%=i[:name]%></span>
 									<span>(<%=i[:record]%>)</span>
@@ -38,7 +38,7 @@
 							</div>
 						<%else%>
 							<div class="team_block_col1 float_left bottom_border">
-								<span class="column_format">
+								<span class="column_format link_column_1">
 									<span><%=i[:seat]%></span>
 									<span id="<%=span_id%>" class="team_name"><%= i[:name] %></span>
 									<span>(<%=i[:record]%>)</span>
@@ -153,7 +153,7 @@
 						<%if round2_rb_array.include? r %>
 							<!--<div class="team_block_col1 float_left bottom_border left_border"><span id="<%=span_id%>" class="column_format_rs team_name_rs"><%= t %></span></div>-->
 							<div class="team_block_col1 float_left bottom_border left_border">
-								<span class="column_format_rs">
+								<span class="column_format_rs link_column_1">
 									<span>(<%=i[:record]%>)</span>
 									<span id="<%=span_id%>" class="team_name"><%=i[:name]%></span>
 									<span><%=i[:seat]%></span>
@@ -161,7 +161,7 @@
 							</div>
 						<%else%>
 								<div class="team_block_col1 float_left bottom_border">	
-									<span class="column_format_rs">
+									<span class="column_format_rs link_column_1">
 										<span>(<%=i[:record]%>)</span>
 										<span id="<%=span_id%>" class="team_name"><%= i[:name] %></span>
 										<span><%=i[:seat]%></span>
