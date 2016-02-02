@@ -26,6 +26,17 @@ class BracketsController < ApplicationController
 		end
 
 		@bracket_points = calc_points(@bracket, @master_bracket)
+		@bracket_col2_points = calc_points_column(@bracket, @master_bracket, 2)
+		@bracket_col3_points = calc_points_column(@bracket, @master_bracket, 3)
+		@bracket_col4_points = calc_points_column(@bracket, @master_bracket, 4)
+		@bracket_col5_points = calc_points_column(@bracket, @master_bracket, 5)
+		@bracket_col6_points = calc_points_column(@bracket, @master_bracket, 6)
+		@bracket_col7_points = calc_points_column(@bracket, @master_bracket, 7)
+		@bracket_col8_points = calc_points_column(@bracket, @master_bracket, 8)
+		@bracket_col9_points = calc_points_column(@bracket, @master_bracket, 9)
+		@bracket_col10_points = calc_points_column(@bracket, @master_bracket, 10)
+		@bracket_col11_points = calc_points_column(@bracket, @master_bracket, 11)
+		@bracket_col12_points = calc_points_column(@bracket, @master_bracket, 12)
 		@cutoffdate = CutoffDate.first
   end
 

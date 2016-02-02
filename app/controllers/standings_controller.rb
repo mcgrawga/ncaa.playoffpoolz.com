@@ -47,5 +47,4 @@ class StandingsController < ApplicationController
 		return standings.sort_by { |k, v| v }.reverse
 	end
 
-
 end

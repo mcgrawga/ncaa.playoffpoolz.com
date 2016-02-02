@@ -23,6 +23,24 @@
 		<% col12_team_counter = 17 %>
 		<% col13_team_counter = 33 %>
 
+		<div class="team_block_col1 float_left"></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col2_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col3_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col4_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col5_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col6_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col7_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col8_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col9_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col10_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col11_points%> pts</span></div>
+		<div class="team_block float_left points_div"><span class="badge points_badge"><%=@bracket_col12_points%> pts</span></div>
+
+		<br/><br/>
+		<div class="clear_left"></div>
+
+
+
 		<% (1..rows).each do |r|  %>
 				<% (1..columns).each do |c|  %>
 					<% if (c == 1) && (r % 2 == 1) %>

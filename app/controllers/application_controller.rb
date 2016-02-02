@@ -60,6 +60,70 @@ class ApplicationController < ActionController::Base
     return points
   end
 
+  def calc_points_column (pb, mb, col)  #player_bracket, master_bracket, column.  Returns points for the column in the bracket for display above the column.
+    points = 0
+
+    case col
+      when 2
+        (1..16).each do |t|
+        col_name = 'round3_team' + t.to_s
+        points = points + 1 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 3
+        (1..8).each do |t|
+        col_name = 'round4_team' + t.to_s
+        points = points + 2 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 4
+        (1..4).each do |t|
+        col_name = 'round5_team' + t.to_s
+        points = points + 4 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 5
+        (1..2).each do |t|
+        col_name = 'round6_team' + t.to_s
+        points = points + 6 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 6
+        (1..1).each do |t|
+        col_name = 'round7_team' + t.to_s
+        points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 7
+        (1..1).each do |t|
+        col_name = 'round8_team' + t.to_s
+        points = points + 10 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 8
+        (2..2).each do |t|
+        col_name = 'round7_team' + t.to_s
+        points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 9
+        (3..4).each do |t|
+        col_name = 'round6_team' + t.to_s
+        points = points + 6 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 10
+        (5..8).each do |t|
+        col_name = 'round5_team' + t.to_s
+        points = points + 4 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 11
+        (9..16).each do |t|
+        col_name = 'round4_team' + t.to_s
+        points = points + 2 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+      when 12
+        (17..32).each do |t|
+        col_name = 'round3_team' + t.to_s
+        points = points + 1 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      end
+    end
+
+    return points
+  end
+
   private
 
 end
