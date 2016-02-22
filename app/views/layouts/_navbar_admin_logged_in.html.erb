@@ -22,7 +22,7 @@
 								<li><%= link_to "Settings", edit_admin_registration_path %></li>
 								<li><%= link_to "Pool Info", charges_increase_pool_size_path %></li>
 								<li><%= link_to "Sign Out", destroy_admin_session_path,  :method => :delete %></li>
-                <% if current_admin.email == "garthmcgraw@statgolf.com" %>
+                <% if current_admin.email.downcased == "garthmcgraw@statgolf.com" || current_admin.email.downcase == "nic.robinson@yahoo.com" || current_player.email.downcase == "swick50@hotmail.com" %>
 								<li class="divider"></li>
                 <li><%= link_to "Master Bracket", edit_master_bracket_path %></li>
                 <li><%= link_to "Edit Teams", teams_edit_path %></li>
