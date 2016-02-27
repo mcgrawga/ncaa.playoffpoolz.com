@@ -3,7 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 # Creating an global function that can be used everywhere, controllers, views, etc.
   def is_super_admin?(email) 
-  	User.where('is_admin = 1').each do |user|
+  	User.where('is_super_admin = 1').each do |user|
   		if user.email == email
   			return true
 		end
