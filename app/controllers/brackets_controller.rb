@@ -160,9 +160,9 @@ class BracketsController < ApplicationController
 
     def authorize_master_bracket
 			if (player_signed_in?)
-				redirect_to staticpages_notauthorized_path unless current_player.email.downcase == 'garthmcgraw@statgolf.com' || current_player.email.downcase == "nic.robinson@yahoo.com" || current_player.email.downcase == "swick50@hotmail.com"
+				redirect_to staticpages_notauthorized_path unless is_super_admin?(current_player.email.downcase)
 			elsif (admin_signed_in?)
-				redirect_to staticpages_notauthorized_path unless current_admin.email.downcase == 'garthmcgraw@statgolf.com' || current_player.email.downcase == "nic.robinson@yahoo.com" || current_player.email.downcase == "swick50@hotmail.com"
+				redirect_to staticpages_notauthorized_path unless is_super_admin?(current_admin.email.downcase)
 			else
 				redirect_to staticpages_notauthorized_path
 			end

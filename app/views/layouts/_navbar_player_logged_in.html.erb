@@ -22,11 +22,11 @@
 								<li><%= link_to "Settings", edit_player_registration_path %></li>
 								<li><%= link_to "Pool Info", charges_increase_pool_size_path %></li>
 								<li><%= link_to "Sign Out", destroy_player_session_path,  :method => :delete %></li>
-								<% if current_player.email.downcase == "garthmcgraw@statgolf.com" || current_player.email.downcase == "nic.robinson@yahoo.com" || current_player.email.downcase == "swick50@hotmail.com" %>
-								<li class="divider"></li>
-								<li><%= link_to "Master Bracket", edit_master_bracket_path %></li>
-								<li><%= link_to "Edit Teams", teams_edit_path %></li>
-								<li><%= link_to "Edit Cutoff Date", cutoff_date_edit_path %></li>
+								<% if is_super_admin?(current_player.email.downcase) %>
+    								<li class="divider"></li>
+    								<li><%= link_to "Master Bracket", edit_master_bracket_path %></li>
+    								<li><%= link_to "Edit Teams", teams_edit_path %></li>
+    								<li><%= link_to "Edit Cutoff Date", cutoff_date_edit_path %></li>
 								<% end %>
               </ul>
             </li>
