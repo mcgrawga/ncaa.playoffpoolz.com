@@ -2,24 +2,27 @@
 <h1>Edit Teams</h1>
 
 <%= form_for :team, :url => teams_update_path, :html => {:method => :put} do %>
-	<table>
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Record</th>
-			<th>Seat</th>
-		</tr>
-	
-		<% @teams.each do |team| %>
-			<%= fields_for "teams[]", team do |team_fields| %>
+	<table class="table table-condensed table-bordered">
+		<thead>
 			<tr>
-				<td><%= team_fields.number_field :id %></td>
-				<td><%= team_fields.text_field :name,  :maxlength => 20 %></td>
-				<td><%= team_fields.text_field :record %></td>
-				<td><%= team_fields.number_field :seat %></td>
-			</tr>	
+				<th>ID</th>
+				<th>Name</th>
+				<th>Record</th>
+				<th>Seat</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @teams.each do |team| %>
+				<%= fields_for "teams[]", team do |team_fields| %>
+				<tr>
+					<td><%= team_fields.number_field :id, {:readonly => true,:class => 'form-control'} %></td>
+					<td><%= team_fields.text_field :name,  {:maxlength => 20,:class => 'form-control'} %></td>
+					<td><%= team_fields.text_field :record,:class => 'form-control' %></td>
+					<td><%= team_fields.number_field :seat,{:readonly => true, :class => 'form-control'} %></td>
+				</tr>	
+				<% end %>
 			<% end %>
-		<% end %>
+		</tbody>
 
 	</table>
 
