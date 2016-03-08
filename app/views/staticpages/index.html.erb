@@ -1,5 +1,8 @@
 <%content_for :title do%>Home<%end%>
-<h1> Create a college basketball tournament pool. </h1>
+<h1> Create a college basketball tournament pool.
+	<span><%=link_to( "Check out an example bracket", "/assets/bracket_image.png", :class => "btn btn-lg" )%><?span>
+</h1>
+<br>
 <h2>Invite your friends, co-workers and enemies.</h2>
 <h2>Humiliate them with your outstanding basketball prowess.</h2>
 <h2>Bask in the glory for a year.</h2>
@@ -8,7 +11,9 @@
 	<div>
 		<a class="btn btn-primary btn-lg" href="/admins/sign_up" role="button" >Create your own college basketball tournament pool for $20</a> 
 		<br><br>
-		<a class="btn btn-secondary" href="/players/sign_in" role="button" >Sign in to an existing pool</a>
+				<a class="btn btn-lg" href="/players/sign_in" role="button" >Sign in to an existing pool</a>
 	</div>
 	</p>
+
+	
 
