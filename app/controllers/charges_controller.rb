@@ -13,7 +13,7 @@ def create
   charge = Stripe::Charge.create(
     :customer    => customer.id,
     :amount      => params[:charge_amt],
-    :description => 'Rails Stripe customer',
+    :statement_descriptor => 'PlayoffPoolz',
     :currency    => 'usd'
   )
 
