@@ -84,6 +84,42 @@ function prep_bracket(){
     	});
     });
 
+
+	// Strikethrough all the team names that have lost, however far they go in the bracket.
+    $('.team_name').each(function(){
+    	if ( $(this).hasClass("strikethrough"))
+    	{
+			var teamName = $(this).text();
+			var id = $(this).attr('id');
+			var round = id.charAt(5);
+			for (var i = round; i <= 8; i++)
+			{
+				var partialSpanTagID = "round" + i + "_team";
+				$('span[id^=' + partialSpanTagID + ']').each(function(){
+		   			if ($(this).text() == teamName)
+		   				$(this).addClass("strikethrough");		
+				});
+			}
+		}
+    });
+    $('.team_name_rs').each(function(){
+    	if ( $(this).hasClass("strikethrough"))
+    	{
+			var teamName = $(this).text();
+			var id = $(this).attr('id');
+			var round = id.charAt(5);
+			for (var i = round; i <= 8; i++)
+			{
+				var partialSpanTagID = "round" + i + "_team";
+				$('span[id^=' + partialSpanTagID + ']').each(function(){
+		   			if ($(this).text() == teamName)
+		   				$(this).addClass("strikethrough");		
+				});
+			}
+		}
+    });
+
+
 		var title = $(document).attr('title');
 		if (title == 'NCAA Tournament Pool - View Bracket' || title == 'NCAA Tournament Pool - View Master Bracket'){
 			$('.column_format').each(function(){

@@ -74,13 +74,22 @@
 .float_right { float: right; }
 .clear_left { clear: left; }
 .clear_right { clear: right; }
+
 .green { 
 	border-radius:10px;
-	#background: Chartreuse;
 	background: lightgreen;
 	padding-left: 5px;
-  padding-right: 5px;
+  	padding-right: 5px;
 }
+
+.strikethrough { 
+	border-radius:10px;
+	background: lightgray;
+	text-decoration: line-through;
+	padding-left: 5px;
+  	padding-right: 5px;
+}
+
 
 .nat_champ_text
 {

@@ -32,6 +32,10 @@ module BracketsHelper
 				if (master_bracket.send(col_name).present?) 
 					return "green"
 				end
+			elsif (bracket.send(col_name) != master_bracket.send(col_name))
+				if (master_bracket.send(col_name).present?) 
+					return "strikethrough"
+				end
 			end
 		end
 	end
