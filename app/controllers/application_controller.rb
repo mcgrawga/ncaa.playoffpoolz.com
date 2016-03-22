@@ -61,6 +61,7 @@ class ApplicationController < ActionController::Base
     return points
   end
 
+
   def calc_points_column (pb, mb, col)  #player_bracket, master_bracket, column.  Returns points for the column in the bracket for display above the column.
     points = 0
 

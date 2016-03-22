@@ -5,7 +5,8 @@
 <% end %>
 <h4 id="bracket_group_title">Click a team to advance them in the bracket.</h4>
 <h4 id="bracket_group_title"><%=@bracket.user.first_name %> <%=@bracket.user.last_name %></h4>
-<h4 id="bracket_group_title"><span class="badge points_badge"><%=@bracket_points%> total points</span></h4>
+<h4 id="bracket_group_title"><span class="badge points_badge"><%=@bracket_points%> points</span></h4>
+<h4 id="bracket_group_title"><span class="badge points_badge potential_points"></span></h4>
 <br>
 <%= render "bracket" %>
 <%= form_for(@bracket) do |f| %>

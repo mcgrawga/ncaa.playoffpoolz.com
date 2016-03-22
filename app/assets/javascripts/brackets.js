@@ -119,6 +119,83 @@ function prep_bracket(){
 		}
     });
 
+    // Calculate potential points remaining in the bracket
+    var potentialPoints = 0;
+    var potentialPointsLabel = "Potential Points Remaining: ";
+    $('.team_name').each(function(){
+    	if ( $(this).text().length <= 0)
+    	{
+    		potentialPoints = "N/A bracket not completely filled out";
+    		return false;
+		}
+		var id = $(this).attr('id');
+		var round = id.charAt(5);
+		if ( round != 2 && !$(this).hasClass("strikethrough") && !$(this).hasClass("green") )
+		{
+			if ( round == 3)
+				potentialPoints += 1;
+			if ( round == 4)
+				potentialPoints += 2;
+			if ( round == 5)
+				potentialPoints += 4;
+			if ( round == 6)
+				potentialPoints += 6;
+			if ( round == 7)
+				potentialPoints += 8;
+			if ( round == 8)
+				potentialPoints += 10;
+		}
+    });
+    $('.team_name_rs').each(function(){
+    	if ( $(this).text().length <= 0)
+    	{
+    		potentialPoints = "N/A bracket not completely filled out";
+    		return false;
+		}
+		var id = $(this).attr('id');
+		var round = id.charAt(5);
+		if ( round != 2 && !$(this).hasClass("strikethrough") && !$(this).hasClass("green") )
+		{
+			if ( round == 3)
+				potentialPoints += 1;
+			if ( round == 4)
+				potentialPoints += 2;
+			if ( round == 5)
+				potentialPoints += 4;
+			if ( round == 6)
+				potentialPoints += 6;
+			if ( round == 7)
+				potentialPoints += 8;
+			if ( round == 8)
+				potentialPoints += 10;
+		}
+    });
+    $('.nat_champ_team').each(function(){
+    	if ( $(this).text().length <= 0)
+    	{
+    		potentialPoints = "N/A bracket not completely filled out";
+    		return false;
+		}
+		var id = $(this).attr('id');
+		var round = id.charAt(5);
+		if ( round != 2 && !$(this).hasClass("strikethrough") && !$(this).hasClass("green") )
+		{
+			if ( round == 3)
+				potentialPoints += 1;
+			if ( round == 4)
+				potentialPoints += 2;
+			if ( round == 5)
+				potentialPoints += 4;
+			if ( round == 6)
+				potentialPoints += 6;
+			if ( round == 7)
+				potentialPoints += 8;
+			if ( round == 8)
+				potentialPoints += 10;
+		}
+    });
+    $('.potential_points').html(potentialPointsLabel + potentialPoints);
+
 
 		var title = $(document).attr('title');
 		if (title == 'NCAA Tournament Pool - View Bracket' || title == 'NCAA Tournament Pool - View Master Bracket'){
