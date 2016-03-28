@@ -7,10 +7,16 @@
   ga('send', 'pageview');
 
 function prep_bracket(){
-		//alert("Yo 1");
+	$( '.team_name, .team_name_rs, .nat_champ_team' ).contextmenu(function() {
+	  	$(this).text('');
+	  	var currentHiddenFieldTag = getHiddenFieldTag($(this).attr('id'));
+	  	$("#" + currentHiddenFieldTag).val('');
+	  	return false;
+	});
+		
     $('.team_name').click(function(){
 			var title = $(document).attr('title');
-			if (title != 'NCAA Tournament Pool - View Bracket' && title != 'NCAA Tournament Pool - View Master Bracket')
+			if (title != 'College Basketball Tournament Pool - View Bracket' && title != 'NCAA Tournament Pool - View Master Bracket')
 		  {	
 							var currentHiddenFieldTag = getHiddenFieldTag($(this).attr('id'));
 							var nextSpanTag = getNextSpanTag($(this).attr('id'));
@@ -31,7 +37,7 @@ function prep_bracket(){
     $('.team_name_rs').click(function(){
 			var title = $(document).attr('title');
 			//alert(title);
-			if (title != 'NCAA Tournament Pool - View Bracket' && title != 'NCAA Tournament Pool - View Master Bracket')
+			if (title != 'College Basketball Tournament Pool - View Bracket' && title != 'NCAA Tournament Pool - View Master Bracket')
 		  {	
 							var currentHiddenFieldTag = getHiddenFieldTag($(this).attr('id'));
 							var nextSpanTag = getNextSpanTag($(this).attr('id'));
@@ -51,7 +57,7 @@ function prep_bracket(){
 
     $('.link_column_1').click(function(){
 			var title = $(document).attr('title');
-			if (title != 'NCAA Tournament Pool - View Bracket' && title != 'NCAA Tournament Pool - View Master Bracket')
+			if (title != 'College Basketball Tournament Pool - View Bracket' && title != 'NCAA Tournament Pool - View Master Bracket')
 		  {	
 							var currentHiddenFieldTag = getHiddenFieldTag($(this).find('.team_name').attr('id'));
 							var nextSpanTag = getNextSpanTag($(this).find('.team_name').attr('id'));
