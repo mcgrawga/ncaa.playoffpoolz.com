@@ -26,6 +26,7 @@ class BracketsController < ApplicationController
 		end
 
 		@bracket_points = calc_points(@bracket, @master_bracket)
+		@potential_points = calc_potential_points(@bracket, @master_bracket)
 		@bracket_col2_points = calc_points_column(@bracket, @master_bracket, 2)
 		@bracket_col3_points = calc_points_column(@bracket, @master_bracket, 3)
 		@bracket_col4_points = calc_points_column(@bracket, @master_bracket, 4)
@@ -74,7 +75,7 @@ class BracketsController < ApplicationController
 		if user_in_same_pool(user_id)
 			@bracket = Bracket.find_by_user_id(user_id)
 			@bracket_points = calc_points(@bracket, @master_bracket)
-			@bracket_points = calc_points(@bracket, @master_bracket)
+			@potential_points = calc_potential_points(@bracket, @master_bracket)
 			@bracket_col2_points = calc_points_column(@bracket, @master_bracket, 2)
 			@bracket_col3_points = calc_points_column(@bracket, @master_bracket, 3)
 			@bracket_col4_points = calc_points_column(@bracket, @master_bracket, 4)

@@ -61,6 +61,81 @@ class ApplicationController < ActionController::Base
     return points
   end
 
+  def calc_potential_points(pb, mb)
+    points = 0
+    (1..32).each do |t|
+      col_name = 'round3_team' + t.to_s
+      return "N/A bracket not completely filled out" if pb.send(col_name) == nil
+      points = points + 1 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+    end
+
+    (1..16).each do |t|
+      col_name = 'round4_team' + t.to_s
+      return "N/A bracket not completely filled out" if pb.send(col_name) == nil
+      points = points + 2 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+    end
+
+    (1..8).each do |t|
+      col_name = 'round5_team' + t.to_s
+      return "N/A bracket not completely filled out" if pb.send(col_name) == nil
+      points = points + 4 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+    end
+
+    (1..4).each do |t|
+      col_name = 'round6_team' + t.to_s
+      return "N/A bracket not completely filled out" if pb.send(col_name) == nil
+      points = points + 6 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+    end
+
+    (1..2).each do |t|
+      col_name = 'round7_team' + t.to_s
+      return "N/A bracket not completely filled out" if pb.send(col_name) == nil
+      points = points + 8 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+    end
+
+    (1..1).each do |t|
+      col_name = 'round8_team' + t.to_s
+      return "N/A bracket not completely filled out" if pb.send(col_name) == nil
+      points = points + 10 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+    end
+    return points
+  end
+
+  def has_team_lost?(teamId, pb, mb)
+    logger.debug "Yo"
+    (1..32).each do |t|
+      col_name = 'round3_team' + t.to_s
+      return true if (pb.send(col_name) != mb.send(col_name) && pb.send(col_name) == teamId && mb.send(col_name) != nil)
+    end
+
+    (1..16).each do |t|
+      col_name = 'round4_team' + t.to_s
+      return true if (pb.send(col_name) != mb.send(col_name) && pb.send(col_name) == teamId && mb.send(col_name) != nil)
+    end
+
+    (1..8).each do |t|
+      col_name = 'round5_team' + t.to_s
+      return true if (pb.send(col_name) != mb.send(col_name) && pb.send(col_name) == teamId && mb.send(col_name) != nil)
+    end
+
+    (1..4).each do |t|
+      col_name = 'round6_team' + t.to_s
+      return true if (pb.send(col_name) != mb.send(col_name) && pb.send(col_name) == teamId && mb.send(col_name) != nil)
+    end
+
+    (1..2).each do |t|
+      col_name = 'round7_team' + t.to_s
+      return true if (pb.send(col_name) != mb.send(col_name) && pb.send(col_name) == teamId && mb.send(col_name) != nil)
+    end
+
+    (1..1).each do |t|
+      col_name = 'round8_team' + t.to_s
+      return true if (pb.send(col_name) != mb.send(col_name) && pb.send(col_name) == teamId && mb.send(col_name) != nil)
+    end
+
+    return false
+  end
+
 
   def calc_points_column (pb, mb, col)  #player_bracket, master_bracket, column.  Returns points for the column in the bracket for display above the column.
     points = 0

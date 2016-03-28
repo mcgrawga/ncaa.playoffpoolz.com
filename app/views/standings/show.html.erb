@@ -5,7 +5,16 @@
   <li class="list-group-item">Click on a player's name to view their bracket.  Click <%= link_to "here", staticpages_scoring_path%> to see how points are awarded. View the <%= link_to "official bracket.", view_master_bracket_path %></li>
   <% @standings.each do |key, value| %>
   	<% n = key.first_name + ' ' + key.last_name %>
-    <li class="list-group-item"><%= link_to n, brackets_view_path(key.id) %><span class="badge points_badge"><%= value %> points</span></li>  
+    <li class="list-group-item">
+    	<%= link_to n, brackets_view_path(key.id) %>
+    	
+    	<% if value[:potential_points] == "N/A bracket not completely filled out" %>
+			<span class="badge points_badge">No potential points, bracket not completely filled out</span>
+		<% else %>
+			<span class="badge points_badge"><%= value[:potential_points] %> potential points remaining</span>
+		<% end %>
+    	<span class="badge points_badge"><%= value[:total_points] %> total points</span>
+    </li>  
   <% end %>
 </ul>
 

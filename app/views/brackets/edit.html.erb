@@ -6,7 +6,11 @@
 <h4 id="bracket_group_title">Click a team to advance them in the bracket.</h4>
 <h4 id="bracket_group_title"><%=@bracket.user.first_name %> <%=@bracket.user.last_name %></h4>
 <h4 id="bracket_group_title"><span class="badge points_badge"><%=@bracket_points%> points</span></h4>
-<h4 id="bracket_group_title"><span class="badge points_badge potential_points"></span></h4>
+<% if @potential_points == "N/A bracket not completely filled out" %>
+      <h4 id="bracket_group_title"><span class="badge points_badge potential_points">No potential points, bracket not completely filled out</span></h4>
+<% else %>
+      <h4 id="bracket_group_title"><span class="badge points_badge potential_points"><%=@potential_points%> potential points remaining</span></h4>
+<% end %>
 <br>
 <%= render "bracket" %>
 <%= form_for(@bracket) do |f| %>

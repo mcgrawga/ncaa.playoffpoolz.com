@@ -41,10 +41,11 @@ class StandingsController < ApplicationController
 		standings = Hash.new
 		players.each do |p|
 			if (p.bracket.present?)
-				standings[p] = calc_points(p.bracket, master_bracket)
+				#standings[p] = calc_points(p.bracket, master_bracket)
+				standings[p] = { :total_points => calc_points(p.bracket, master_bracket), :potential_points => calc_potential_points(p.bracket, master_bracket) }
 			end
 		end
-		return standings.sort_by { |k, v| v }.reverse
+		return standings.sort_by { |k, v| v[:total_points] }.reverse
 	end
 
 end
