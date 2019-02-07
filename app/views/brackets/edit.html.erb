@@ -1,5 +1,5 @@
 <%content_for :title do%>Edit Bracket<%end%>
-<h1 id="bracket_title">2016 College Basketball Bracket Challenge (<%=@bracket.user.pool_name.titleize%>)</h1>
+<h1 id="bracket_title">2019 College Basketball Bracket Challenge (<%=@bracket.user.pool_name.titleize%>)</h1>
 <% if @cutoffdate.present? %>
 	<h3 id="bracket_group_title">Bracket must be completed by <%= @cutoffdate.dt_time.strftime("%B %d, %I:%M %p") %></h3>
 <% end %>
