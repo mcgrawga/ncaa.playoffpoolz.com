@@ -1,0 +1,11 @@
+user_1:
+  id: 1
+  email: garthmcgraw@statgolf.com
+  encrypted_password: $2a$10$LmgK42MKyKpmeLEVg3sMcOpVe7zlrbN8Yl1/7pzZEPfnNjcSMwVHm
+  pool_name: Indy
+  is_admin: 1
+  first_name: Garth
+  last_name: McGraw
+  is_paid: 1
+  player_limit: 1000
+  is_super_admin: 1
