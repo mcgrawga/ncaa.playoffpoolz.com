@@ -5,7 +5,7 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="form-group"><%= f.label :pool_name %><br />
+  <div class="form-group"><%= f.label :pool_name %> (Probably the pool name your buddy told you to use)<br />
   <%= f.text_field :pool_name, {:autofocus => true,:class => 'form-control'} %></div><br>
 
   <div class="form-group"><%= f.label :first_name %><br />
