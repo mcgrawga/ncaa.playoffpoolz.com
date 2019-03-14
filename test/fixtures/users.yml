@@ -9,3 +9,15 @@ user_1:
   is_paid: 1
   player_limit: 1000
   is_super_admin: 1
+
+user_2:
+  id: 2
+  email: msatren@gmail.com
+  encrypted_password: $2a$10$LmgK42MKyKpmeLEVg3sMcOpVe7zlrbN8Yl1/7pzZEPfnNjcSMwVHm
+  pool_name: Mules
+  is_admin: 1
+  first_name: Micah
+  last_name: Satren
+  is_paid: 1
+  player_limit: 1000
+  is_super_admin: 1

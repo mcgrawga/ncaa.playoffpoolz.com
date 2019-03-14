@@ -30,32 +30,32 @@ class ApplicationController < ActionController::Base
     points = 0
     (1..32).each do |t|
       col_name = 'round3_team' + t.to_s
-      points = points + 1 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      points = points + 3 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
     (1..16).each do |t|
       col_name = 'round4_team' + t.to_s
-      points = points + 2 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      points = points + 5 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
     (1..8).each do |t|
       col_name = 'round5_team' + t.to_s
-      points = points + 4 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
     (1..4).each do |t|
       col_name = 'round6_team' + t.to_s
-      points = points + 6 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      points = points + 13 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
     (1..2).each do |t|
       col_name = 'round7_team' + t.to_s
-      points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      points = points + 21 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
     (1..1).each do |t|
       col_name = 'round8_team' + t.to_s
-      points = points + 10 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+      points = points + 34 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
     return points
@@ -66,37 +66,37 @@ class ApplicationController < ActionController::Base
     (1..32).each do |t|
       col_name = 'round3_team' + t.to_s
       return "N/A bracket not completely filled out" if pb.send(col_name) == nil
-      points = points + 1 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+      points = points + 3 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
     end
 
     (1..16).each do |t|
       col_name = 'round4_team' + t.to_s
       return "N/A bracket not completely filled out" if pb.send(col_name) == nil
-      points = points + 2 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+      points = points + 5 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
     end
 
     (1..8).each do |t|
       col_name = 'round5_team' + t.to_s
       return "N/A bracket not completely filled out" if pb.send(col_name) == nil
-      points = points + 4 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+      points = points + 8 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
     end
 
     (1..4).each do |t|
       col_name = 'round6_team' + t.to_s
       return "N/A bracket not completely filled out" if pb.send(col_name) == nil
-      points = points + 6 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+      points = points + 13 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
     end
 
     (1..2).each do |t|
       col_name = 'round7_team' + t.to_s
       return "N/A bracket not completely filled out" if pb.send(col_name) == nil
-      points = points + 8 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+      points = points + 21 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
     end
 
     (1..1).each do |t|
       col_name = 'round8_team' + t.to_s
       return "N/A bracket not completely filled out" if pb.send(col_name) == nil
-      points = points + 10 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
+      points = points + 34 if mb.send(col_name) == nil && !has_team_lost?(pb.send(col_name), pb, mb)
     end
     return points
   end
@@ -144,57 +144,57 @@ class ApplicationController < ActionController::Base
       when 2
         (1..16).each do |t|
         col_name = 'round3_team' + t.to_s
-        points = points + 1 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 3 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 3
         (1..8).each do |t|
         col_name = 'round4_team' + t.to_s
-        points = points + 2 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 5 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 4
         (1..4).each do |t|
         col_name = 'round5_team' + t.to_s
-        points = points + 4 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 5
         (1..2).each do |t|
         col_name = 'round6_team' + t.to_s
-        points = points + 6 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 13 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 6
         (1..1).each do |t|
         col_name = 'round7_team' + t.to_s
-        points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 21 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 7
         (1..1).each do |t|
         col_name = 'round8_team' + t.to_s
-        points = points + 10 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 34 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 8
         (2..2).each do |t|
         col_name = 'round7_team' + t.to_s
-        points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 21 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 9
         (3..4).each do |t|
         col_name = 'round6_team' + t.to_s
-        points = points + 6 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 13 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 10
         (5..8).each do |t|
         col_name = 'round5_team' + t.to_s
-        points = points + 4 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 11
         (9..16).each do |t|
         col_name = 'round4_team' + t.to_s
-        points = points + 2 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 5 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
       when 12
         (17..32).each do |t|
         col_name = 'round3_team' + t.to_s
-        points = points + 1 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
+        points = points + 3 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
       end
     end
 

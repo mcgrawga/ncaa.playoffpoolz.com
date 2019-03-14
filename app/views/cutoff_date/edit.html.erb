@@ -1,12 +1,12 @@
 <h1>Edit the cutoff date</h1>
 <br>
-<%= Time.zone.now.strftime("NOW:  %I:%M %p on %B %d") %><br>
-<br><br>
+<p><%= Time.zone.now.strftime("NOW:  %I:%M %p on %B %d") %></p>
  <%= form_for @cutoffdate, :url => cutoff_date_update_path, :html => {:method => :put} do |f|  %>
     <%= f.hidden_field :id %>
     <div class="form-group">
     	<%= datetime_select(:cutoffdate, :dt_time, ampm: true, :prompt => true ) %>
 	</div>
+	<p>Make sure you enter this in CST you ignorant SOB</p>
 	<div class="form-group">
     	<%= f.submit "Save Cutoff Date", class: "btn btn-primary" %>
     </div>
