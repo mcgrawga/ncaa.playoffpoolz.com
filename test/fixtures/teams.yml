@@ -4,384 +4,384 @@
 
 team_1:
   id: 1
-  name: Villanova
-  record: 31-3
+  name: Duke
+  record: 29-5
   seat: 1
 
 team_2:
   id: 2
-  name: Mount St. Mary's
-  record: 24-7
+  name: NC Central/N. Dakota St.
+  record: ?-?
   seat: 16
 
 team_3:
   id: 3
-  name: Wisconsin
-  record: 25-9
+  name: VCU
+  record: 25-7
   seat: 8
 
 team_4:
   id: 4
-  name: Virginia Tech
-  record: 22-10
+  name: UCF
+  record: 23-8
   seat: 9
 
 team_5:
   id: 5
-  name: Virginia
-  record: 22-10
+  name: Mississippi St.
+  record: 23-10
   seat: 5
 
 team_6:
   id: 6
-  name: UNC Wilmington
-  record: 29-5
+  name: Liberty
+  record: 28-6
   seat: 12
 
 team_7:
   id: 7
-  name: Florida
+  name: Virginia Tech
   record: 24-8
   seat: 4
 
 team_8:
   id: 8
-  name: East Tenn. St.
-  record: 27-7
+  name: St. Louis
+  record: 23-12
   seat: 13
 
 team_9:
   id: 9
-  name: SMU
-  record: 30-4
+  name: Maryland
+  record: 22-10
   seat: 6
 
 team_10:
   id: 10
-  name: USC
-  record: 24-7
+  name: Belmont/Temple
+  record: ?-?
   seat: 11
 
 team_11:
   id: 11
-  name: Baylor
-  record: 25-7
+  name: LSU
+  record: 26-6
   seat: 3
 
 team_12:
   id: 12
-  name: New Mexico St.
-  record: 28-5
+  name: Yale
+  record: 22-7
   seat: 14
 
 team_13:
   id: 13
-  name: South Carolina
-  record: 22-10
+  name: Louisville
+  record: 22-13
   seat: 7
 
 team_14:
   id: 14
-  name: Marquette
-  record: 19-12
+  name: Minnesota
+  record: 21-13
   seat: 10
 
 team_15:
   id: 15
-  name: Duke
-  record: 27-8
+  name: Michigan St.
+  record: 28-6
   seat: 2
 
 team_16:
   id: 16
-  name: Troy
-  record: 22-14
+  name: Bradley
+  record: 20-14
   seat: 15
 
 team_17:
   id: 17
   name: Gonzaga
-  record: 32-1
+  record: 30-3
   seat: 1
 
 team_18:
   id: 18
-  name: S Dakota St.
-  record: 18-16
+  name: F.Dickinson/Prairie View
+  record: ?-?
   seat: 16
 
 team_19:
   id: 19
-  name: Northwestern
-  record: 23-11
+  name: Syracuse
+  record: 20-13
   seat: 8
 
 team_20:
   id: 20
-  name: Vanderbilt
-  record: 19-15
+  name: Baylor
+  record: 19-13
   seat: 9
 
 team_21:
   id: 21
-  name: Notre Dame
-  record: 25-9
+  name: Marquette
+  record: 24-9
   seat: 5
 
 team_22:
   id: 22
-  name: Princeton
-  record: 23-6
+  name: Murray St.
+  record: 27-4
   seat: 12
 
 team_23:
   id: 23
-  name: West Virginia
-  record: 26-8
+  name: Florida St.
+  record: 27-7
   seat: 4
 
 team_24:
   id: 24
-  name: Bucknell
-  record: 26-8
+  name: Vermont
+  record: 27-6
   seat: 13
 
 team_25:
   id: 25
-  name: Maryland
-  record: 24-8
+  name: Buffalo
+  record: 31-3
   seat: 6
 
 team_26:
   id: 26
-  name: Xavier
-  record: 21-13
+  name: Arizone St./St. Johns
+  record: ?-?
   seat: 11
 
 team_27:
   id: 27
-  name: Florida St.
-  record: 25-8
+  name: Texas Tech
+  record: 26-6
   seat: 3
 
 team_28:
   id: 28
-  name: Fla. Gulf Coast
-  record: 26-7
+  name: Northern Kentucky
+  record: 26-8
   seat: 14
 
 team_29:
   id: 29
-  name: Saint Mary's
-  record: 28-4
+  name: Nevada
+  record: 29-4
   seat: 7
 
 team_30:
   id: 30
-  name: VCU
-  record: 26-8
+  name: Florida
+  record: 19-15
   seat: 10
 
 team_31:
   id: 31
-  name: Arizona
-  record: 30-4
+  name: Michigan
+  record: 28-6
   seat: 2
 
 team_32:
   id: 32
-  name: North Dakota
-  record: 22-9
+  name: Montana
+  record: 26-8
   seat: 15
 
 team_33:
   id: 33
-  name: Kansas
-  record: 28-4
+  name: Virginia
+  record: 29-3
   seat: 1
 
 team_34:
   id: 34
-  name: UC Davis
-  record: 24-7
+  name: Gardner-Webb
+  record: 23-11
   seat: 16
 
 team_35:
   id: 35
-  name: Miami (Fla.)
-  record: 21-11
+  name: Mississippi
+  record: 20-12
   seat: 8
 
 team_36:
   id: 36
-  name: Michigan St.
-  record: 19-14
+  name: Oklahoma
+  record: 19-13
   seat: 9
 
 team_37:
   id: 37
-  name: Iowa St.
+  name: Wisconsin
   record: 23-10
   seat: 5
 
 team_38:
   id: 38
-  name: Nevada
-  record: 28-6
+  name: Oregon
+  record: 23-12
   seat: 12
 
 team_39:
   id: 39
-  name: Purdue
-  record: 25-7
+  name: Kansas St.
+  record: 25-8
   seat: 4
 
 team_40:
   id: 40
-  name: Vermont
-  record: 29-5
+  name: UC Irvine
+  record: 30-5
   seat: 13
 
 team_41:
   id: 41
-  name: Creighton
+  name: Villanova
   record: 25-9
   seat: 6
 
 team_42:
   id: 42
-  name: Rhode Island
-  record: 24-9
+  name: Saint Mary's
+  record: 22-11
   seat: 11
 
 team_43:
   id: 43
-  name: Oregon
-  record: 29-5
+  name: Purdue
+  record: 23-9
   seat: 3
 
 team_44:
   id: 44
-  name: Iona
-  record: 22-12
+  name: Old Dominion
+  record: 26-8
   seat: 14
 
 team_45:
   id: 45
-  name: Michigan
-  record: 24-11
+  name: Cincinnati
+  record: 28-6
   seat: 7
 
 team_46:
   id: 46
-  name: Oklahoma St.
-  record: 20-12
+  name: Iowa
+  record: 22-11
   seat: 10
 
 team_47:
   id: 47
-  name: Louisville
-  record: 24-8
+  name: Tennessee
+  record: 29-5
   seat: 2
 
 team_48:
   id: 48
-  name: Jacksonville St.
-  record: 20-14
+  name: Colgate
+  record: 24-10
   seat: 15
 
 team_49:
   id: 49
   name: North Carolina
-  record: 27-7
+  record: 27-6
   seat: 1
 
 team_50:
   id: 50
-  name: Texas Southern
-  record: 23-11
+  name: Iona
+  record: 17-15
   seat: 16
 
 team_51:
   id: 51
-  name: Arkansas
-  record: 25-9
+  name: Utah St.
+  record: 28-6
   seat: 8
 
 team_52:
   id: 52
-  name: Seton Hall
-  record: 21-11
+  name: Washington
+  record: 26-8
   seat: 9
 
 team_53:
   id: 53
-  name: Minnesota
-  record: 24-9
+  name: Auburn
+  record: 26-9
   seat: 5
 
 team_54:
   id: 54
-  name: Middle Tenn.
+  name: New Mexico St.
   record: 30-4
   seat: 12
 
 team_55:
   id: 55
-  name: Butler
-  record: 23-8
+  name: Kansas
+  record: 25-9
   seat: 4
 
 team_56:
   id: 56
-  name: Winthrop
-  record: 26-6
+  name: Northeastern
+  record: 23-10
   seat: 13
 
 team_57:
   id: 57
-  name: Cincinnati
-  record: 29-5
+  name: Iowa St.
+  record: 23-11
   seat: 6
 
 team_58:
   id: 58
-  name: Kansas St.
-  record: 24-7
+  name: Ohio St.
+  record: 19-14
   seat: 11
 
 team_59:
   id: 59
-  name: UCLA
-  record: 29-4
+  name: Houston
+  record: 31-3
   seat: 3
 
 team_60:
   id: 60
-  name: Kent St.
-  record: 22-13
+  name: Georgia St.
+  record: 24-9
   seat: 14
 
 team_61:
   id: 61
-  name: Dayton
-  record: 24-7
+  name: Wofford
+  record: 29-4
   seat: 7
 
 team_62:
   id: 62
-  name: Wichita St.
-  record: 30-4
+  name: Seton Hall
+  record: 20-13
   seat: 10
 
 team_63:
   id: 63
   name: Kentucky
-  record: 29-5
+  record: 27-6
   seat: 2
 
 team_64:
   id: 64
-  name: Northern Ky.
-  record: 24-10
+  name: Abilene Christ
+  record: 27-6
   seat: 15
