@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 # Needed to deploy to Heroku
 gem 'rails_12factor', group: :production
